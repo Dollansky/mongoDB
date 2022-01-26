@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.http.ResponseEntity.ok;
+
 @RestController
 @RequestMapping("api/timeIntervall")
 @AllArgsConstructor
-public class timeIntervallController {
+public class TimeIntervallController {
 
     private final TimeIntervallService timeIntervallService;
 
@@ -28,11 +30,7 @@ public class timeIntervallController {
 
         return new ResponseEntity<TimeIntervall>(timeIntervallService.saveIntervall(s), HttpStatus.OK);
 
-//        timeIntervallService.saveIntervall(timeIntervall);
     }
 
-    @GetMapping("/{id}")
-    public List<TimeIntervall> getAllIntervallsById(@PathVariable("id") Long participantId){
-        return timeIntervallService.getAlltimeIntervallById(participantId);
-    }
+
 }

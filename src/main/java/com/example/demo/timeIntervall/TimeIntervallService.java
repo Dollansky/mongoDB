@@ -20,8 +20,4 @@ public class TimeIntervallService {
         return timeRepository.save(timeIntervall);
     }
 
-    public List<TimeIntervall> getAlltimeIntervallById(Long participantId){
-        return timeRepository.findAllByParticipantId(participantId);
-
-    }
 }

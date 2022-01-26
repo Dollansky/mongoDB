@@ -8,7 +8,4 @@ import java.util.List;
 public interface timeRepository
         extends MongoRepository<TimeIntervall, String> {
 
-    List<TimeIntervall> findAllByParticipantId(Long participantId);
-
-
 }

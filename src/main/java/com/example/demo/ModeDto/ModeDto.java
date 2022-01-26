@@ -1,25 +1,25 @@
-package com.example.demo.timeIntervall;
+package com.example.demo.ModeDto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Builder
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
-public class TimeIntervall {
+public class ModeDto {
     @Id
     private String id;
     private String participantId;
-    private Number timeSpend;
-    private boolean blacklisted;
     private boolean mode;
-    private boolean baselineFinished;
-    private String goal;
-
+    private Date dateWhenModeEnds;
+    private Double duration;
 }

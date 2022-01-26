@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "maven": "^5.0.0",
-    "mvn": "^3.5.0"
+    "mvn": "^3.5.0",
+    "nvm": "github:nvm-sh/nvm"
   }
 }
