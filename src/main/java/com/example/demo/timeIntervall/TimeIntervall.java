@@ -17,9 +17,11 @@ public class TimeIntervall {
     private String id;
     private String participantId;
     private Number timeSpend;
+    private String domain;
     private boolean blacklisted;
     private boolean mode;
     private boolean baselineFinished;
+    private String goalId;
     private String goal;
-
+    private String reason;
 }

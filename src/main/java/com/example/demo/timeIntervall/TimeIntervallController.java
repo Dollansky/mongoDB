@@ -1,5 +1,6 @@
 package com.example.demo.timeIntervall;
 
+import com.example.demo.participant.ParticipantService;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import static org.springframework.http.ResponseEntity.ok;
 public class TimeIntervallController {
 
     private final TimeIntervallService timeIntervallService;
+    private final ParticipantService participantService;
 
 
 
@@ -27,7 +29,7 @@ public class TimeIntervallController {
 
     @PostMapping("/create")
     public ResponseEntity<TimeIntervall> saveIntervall(@RequestBody TimeIntervall s) {
-
+        participantService.addTimeIntervallToParticipant(s);
         return new ResponseEntity<TimeIntervall>(timeIntervallService.saveIntervall(s), HttpStatus.OK);
 
     }
